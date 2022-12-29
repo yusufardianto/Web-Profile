@@ -1,0 +1,198 @@
+// @import "../vendor/bootstrap/scss/bootstrap.scss";
+
+.sidebar-dashboard {
+  a {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  h2 {
+    font-weight: 500;
+    // min-height: 100vh;
+    font-size: 25px;
+    line-height: 54px;
+    color: #000000;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .heading-skills::after {
+    content: "";
+    // position: absolute;
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #012e6b;
+    bottom: 0;
+    left: 0;
+    border: 2px solid #012e6b;
+  }
+  .heading-contact::after {
+    content: "";
+    // position: absolute;
+    display: block;
+    width: 200px;
+    height: 3px;
+    background: #012e6b;
+    bottom: 0;
+    left: 0;
+    border: 2px solid #012e6b;
+  }
+  h5 {
+    color: #000000;
+    font-weight: 30;
+    line-height: 25px;
+    font-size: 15px;
+  }
+  // h6 {
+  //   color: #ffffff;
+  //   font-weight: 30;
+  //   line-height: 15px;
+  //   font-size: 10px;
+  // }
+  #sidebar-content {
+    width: 375px;
+    position: fixed;
+    min-height: 1054px;
+    // min-width: 100vh;
+    background: #012e6b;
+    padding: 2rem 2rem;
+
+    .sidebar-heading {
+      width: 255px;
+      top: 130px;
+      height: 200px;
+    }
+    .list-group-item {
+      border: 0;
+      min-height: 80px;
+      font-size: 10px;
+      color: white;
+      background: none;
+
+      &.active {
+        background: #0087fe;
+        border-radius: 15px;
+        padding: 2rem 2rem;
+        color: white;
+      }
+    }
+  }
+  #dashboard-content {
+    background: #d5deff;
+    padding-left: 380px;
+    padding-right: 20px;
+
+    .dashboard-profile {
+      .dashboard-profile-foto {
+        padding: 2rem 2rem;
+
+        background: #ffffff;
+        border: 10px solid #ffffff;
+        box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.29);
+        border-radius: 30px;
+        min-width: 20rem;
+
+        .alamat {
+          h5 {
+            color: #272727;
+            font-style: normal;
+            font-weight: 500;
+          }
+        }
+        .informasi {
+          h5 {
+            color: #272727;
+            font-style: italic;
+            font-weight: 100;
+          }
+        }
+        .photo {
+          .foto {
+            border: 10px solid #ffffff;
+            border-radius: 30px;
+          }
+        }
+        .text-profil {
+          margin-left: 20px;
+        }
+      }
+    }
+    .education {
+      // background: #8f9dc6;
+      margin-top: 20px;
+      // margin-left: -0.95rem;
+      // min-width: 2rem 8rem;
+      // width: 100%;
+      padding: 10px 10px;
+      .education-content {
+        .edu-content {
+          background: rgb(255, 255, 255);
+          border-radius: 20px;
+          box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.29);
+          // padding: 10px 20px;
+          .foto-edu {
+            padding-left: 25px;
+            padding-top: 20px;
+            // height: 180px;
+            .logo-edu {
+              border-radius: 20px;
+              width: 130px;
+            }
+          }
+          .name-edu {
+            padding-top: 20px;
+          }
+
+          .detail-edu {
+            padding-left: 45px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #848484;
+          }
+        }
+      }
+    }
+    .dashboard-profile-skills {
+      // margin-left: ;
+      background: #ffffff;
+      border: 10px solid #ffffff;
+      border-radius: 30px;
+      box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.29);
+      padding: 30px 30px;
+      // min-width: 20rem;
+
+      .skill-name {
+        margin-left: 10px;
+        // min-width: 30px;
+        // min-height: 10px;
+      }
+      .skill-image {
+        width: 42px;
+        height: 42px;
+        margin-top: 10px;
+        margin: auto;
+      }
+    }
+    .dashboard-profile-contact {
+      background: #ffffff;
+      border: 10px solid #ffffff;
+      border-radius: 30px;
+      padding: 2rem 2rem;
+      // margin-left: 1rem;
+      // max-width: 20rem;
+      box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.29);
+
+      .contact-name {
+        margin-left: 30px;
+        max-width: 3rem;
+      }
+      .contact-image {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}
