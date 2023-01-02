@@ -47,43 +47,97 @@
     font-size: 15px;
   }
   // h6 {
-  //   color: #ffffff;
-  //   font-weight: 30;
+  //   color: #000000;
+  //   font-weight: 355;
   //   line-height: 15px;
-  //   font-size: 10px;
+  //   font-size: 14px;
   // }
-  #sidebar-content {
-    width: 375px;
-    position: fixed;
-    min-height: 1054px;
-    // min-width: 100vh;
+  #sidebar-wrapper {
+    // width: 3;
+    // position: fixed;
+    // min-height: 1054px;
+    min-width: 44vh;
+    min-height: 100%;
+    margin-left: -25rem;
+    transition: margin 0.25 ease- out;
     background: #012e6b;
-    padding: 2rem 2rem;
+    padding: 1rem 1rem;
 
     .sidebar-heading {
-      width: 255px;
+      width: 200px;
       top: 130px;
       height: 200px;
+
+      .image-logo {
+        width: 200px;
+      }
     }
     .list-group-item {
       border: 0;
-      min-height: 80px;
-      font-size: 10px;
+      min-height: 20px;
+      font-size: 20px;
       color: white;
       background: none;
 
       &.active {
         background: #0087fe;
         border-radius: 15px;
-        padding: 2rem 2rem;
+        padding: 1rem 1rem;
         color: white;
       }
     }
   }
+  #wrapper {
+    &.toggled {
+      #sidebar-wrapper {
+        margin-left: 0px;
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .navbar-store {
+    margin-top: 0;
+    background-color: #012e6b;
+    box-shadow: 10px 20px 15px rgba(171, 171, 171, 0.29);
+
+    @include media-breakpoint-up(md) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    #sidebar-wrapper {
+      margin-left: 0;
+      margin-top: 0px;
+    }
+
+    #dashboard-content {
+      min-width: 0;
+      width: 70%;
+      // margin-left: 25rem;
+    }
+
+    #wrapper {
+      &.toggled {
+        #sidebar-wrapper {
+          margin-left: 0;
+        }
+      }
+    }
+  }
   #dashboard-content {
-    background: #d5deff;
-    padding-left: 380px;
-    padding-right: 20px;
+    // background: #d5deff;
+    // min-width: 100vw;
+    // position: absolute;
+    // padding-left: 360px;
+    margin-left: 5rem;
+    margin-top: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 25px;
+      margin-right: 10px;
+    }
 
     .dashboard-profile {
       .dashboard-profile-foto {
@@ -139,7 +193,7 @@
             // height: 180px;
             .logo-edu {
               border-radius: 20px;
-              width: 130px;
+              width: 100px;
             }
           }
           .name-edu {

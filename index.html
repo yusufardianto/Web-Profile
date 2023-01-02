@@ -15,16 +15,18 @@
   </head>
   <body>
     <div class="sidebar-dashboard">
-      <div class="d-flex" id="wrapper">
+      <div class="d-flex" id="wrapper" data-aos="fade-right">
         <!-- sidebar -->
-        <div class="border-right" id="sidebar-content" data-aos="fade-right">
+        <!-- <div class="row"> -->
+        <!-- <div class="col-md-3"> -->
+        <div class="border-right" id="sidebar-wrapper">
           <div
             class="sidebar-heading text-center"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <a href="">
-              <img src="images/my-logo.png" alt="" class="my-4" />
+              <img src="images/my-logo.png" alt="" class="image-logo my-4" />
             </a>
           </div>
           <div class="list-group list-group-flush">
@@ -48,7 +50,7 @@
               href="project.html"
               class="list-group-item list-group-item-action"
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-delay="400"
             >
               <img src="images/icon-project.svg" alt="" /> Project
             </a>
@@ -62,7 +64,20 @@
             </a>
           </div>
         </div>
+        <!-- </div> -->
+        <!-- <div class="col-md-8"> -->
         <div id="dashboard-content">
+          <nav
+            class="navbar navbar-expand-lg navbar-light navbar-store fixed-top"
+            data-aos="fade-down"
+          >
+            <button
+              class="btn btn-primary d-md-none mr-auto mr-2"
+              id="menu-toggle"
+            >
+              &laquo; Menu
+            </button>
+          </nav>
           <div class="container-fluid">
             <div class="dashboard-profile">
               <div class="row">
@@ -131,7 +146,7 @@
                                 data-aos="zoom-in"
                                 data-aos-delay="300"
                               >
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                   <div class="foto-edu">
                                     <img
                                       src="images/logo-pens.png"
@@ -140,14 +155,14 @@
                                     />
                                   </div>
                                 </div>
-                                <div class="name-edu col-md-4">
+                                <div class="name-edu col-md-4 p-4">
                                   <h3>
                                     Electronic Engineering Polytechnic Institute
                                     of Surabaya
                                   </h3>
                                 </div>
                                 <div class="row">
-                                  <div class="detail-edu">
+                                  <div class="detail-edu px-4">
                                     <h5>majors in D4 technical information</h5>
                                   </div>
                                 </div>
@@ -167,7 +182,7 @@
                                 data-aos="zoom-in"
                                 data-aos-delay="400"
                               >
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                   <div class="foto-edu">
                                     <img
                                       src="images/logo-ub.png"
@@ -176,11 +191,11 @@
                                     />
                                   </div>
                                 </div>
-                                <div class="name-edu col-md-4">
+                                <div class="name-edu col-md-4 p-4">
                                   <h3>Brawijaya University</h3>
                                 </div>
                                 <div class="row">
-                                  <div class="detail-edu">
+                                  <div class="detail-edu px-4">
                                     <h5>majors in D3 System Information</h5>
                                   </div>
                                 </div>
@@ -200,7 +215,7 @@
                                 data-aos="zoom-in"
                                 data-aos-delay="500"
                               >
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                   <div class="foto-edu">
                                     <img
                                       src="images/logo-Sma4.png"
@@ -209,11 +224,11 @@
                                     />
                                   </div>
                                 </div>
-                                <div class="name-edu col-md-4">
+                                <div class="name-edu col-md-4 p-4">
                                   <h3>Senior High School 4 Sidoarjo</h3>
                                 </div>
                                 <div class="row">
-                                  <div class="detail-edu">
+                                  <div class="detail-edu px-4">
                                     <h5>majors in mathematics and science</h5>
                                   </div>
                                 </div>
@@ -398,7 +413,7 @@
                         />
                       </div>
                       <div class="contact-name col-md-8 mt-4">
-                        <h5>Muhammadyusufardianto@gmail.com</h5>
+                        <h5>Muhammadyusufardianto @gmail.com</h5>
                       </div>
                     </div>
                   </div>
@@ -407,6 +422,8 @@
             </div>
           </div>
         </div>
+        <!-- </div> -->
+        <!-- </div> -->
       </div>
     </div>
     <footer>
@@ -430,5 +447,11 @@
       AOS.init();
     </script>
     <script src="script/navbar-scroll.js"></script>
+    <script>
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
   </body>
 </html>
